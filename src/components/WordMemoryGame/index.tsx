@@ -100,7 +100,9 @@ export function WordMemoryGame() {
     score !== null &&
     !completionToastShown.current
   ) {
-    toast.success(`🎉 You've completed the game!`);
+    //toast.success(`🎉 You've completed the game!`);
+    toast.success(`🎉 Hơi non nha! Gà thiệt sự`);
+
     completionToastShown.current = true;
   }
 
