@@ -8,7 +8,7 @@ export const Confetti = memo(({ colors }: ConfettiProps) => {
   const confetti = Array.from({ length: 30 }).map((_, i) => (
     <div
       key={i}
-      className="confetti"
+      className="absolute animate-fall"
       style={{
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 30}%`,

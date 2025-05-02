@@ -1,16 +1,31 @@
 import { WordPair } from "../types";
 
 export const wordPairs: WordPair[] = [
-  { id: 1, english: "bánh đa", french: "bánh tráng" },
-  { id: 2, english: "lạc", french: "đậu phộng" },
-  { id: 3, english: "ngô", french: "bắp" },
-  { id: 4, english: "vừng", french: "mè" },
-  { id: 5, english: "dứa", french: "thơm" },
-  { id: 6, english: "nem rán", french: "chả giò" },
-  { id: 7, english: "hồng xiêm", french: "sapoche" },
-  { id: 8, english: "roi", french: "mận" },
-  { id: 9, english: "dọc mùng", french: "bạc hà" },
-  { id: 10, english: "mộc nhĩ", french: "nấm mèo" },
-  { id: 11, english: "nộm", french: "gỏi" },
-  { id: 12, english: "củ đậu", french: "củ sắn (sắn nước)" },
+  { id: 1, english: "forest", french: "forêt" },
+  { id: 2, english: "sibling", french: "frère et sœur" },
+  { id: 3, english: "cereal", french: "céréale" },
+  { id: 4, english: "desk", french: "bureau" },
+  { id: 5, english: "camel", french: "chameau" },
+  { id: 6, english: "butter", french: "beurre" },
+  { id: 7, english: "bicycle", french: "vélo" },
+  { id: 8, english: "railroad", french: "chemin de fer" },
+  { id: 9, english: "folder", french: "dossier" },
+  { id: 10, english: "weekly", french: "hebdomadaire" },
+  { id: 11, english: "hungry", french: "faim" },
+  { id: 12, english: "limestone", french: "calcaire" },
 ];
+
+/*const initialWordPairs: WordPair[] = [
+  { id: 1, english: "forest", french: "forêt" },
+  { id: 2, english: "sibling", french: "frère et sœur" },
+  { id: 3, english: "cereal", french: "céréale" },
+  { id: 4, english: "desk", french: "bureau" },
+  { id: 5, english: "camel", french: "chameau" },
+  { id: 6, english: "butter", french: "beurre" },
+  { id: 7, english: "bicycle", french: "vélo" },
+  { id: 8, english: "railroad", french: "chemin de fer" },
+  { id: 9, english: "folder", french: "dossier" },
+  { id: 10, english: "weekly", french: "hebdomadaire" },
+  { id: 11, english: "hungry", french: "faim" },
+  { id: 12, english: "limestone", french: "calcaire" },
+];*/

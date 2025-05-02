@@ -15,23 +15,25 @@ export const StatsDisplay = ({
   totalPairs,
 }: StatsDisplayProps) => {
   return (
-    <div className="stats-container">
-      <div className="stat-item moves-stat">
-        <Icons.Steps />
-        <span className="stat-label">Moves</span>
-        <span className="stat-value">{moves}</span>
+    <div className="flex justify-center gap-8 mt-6">
+      <div className="flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md">
+        <Icons.Steps className="w-6 h-6 text-emerald-600 mb-2" />
+        <span className="text-sm font-medium text-gray-600">Moves</span>
+        <span className="text-xl font-bold text-gray-800">{moves}</span>
       </div>
 
-      <div className="stat-item time-stat">
-        <Icons.Clock />
-        <span className="stat-label">Time</span>
-        <span className="stat-value">{formatTime(gameTime)}</span>
+      <div className="flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md">
+        <Icons.Clock className="w-6 h-6 text-emerald-600 mb-2" />
+        <span className="text-sm font-medium text-gray-600">Time</span>
+        <span className="text-xl font-bold text-gray-800">
+          {formatTime(gameTime)}
+        </span>
       </div>
 
-      <div className="stat-item pairs-stat">
-        <Icons.Pairs />
-        <span className="stat-label">Pairs</span>
-        <span className="stat-value">
+      <div className="flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md">
+        <Icons.Pairs className="w-6 h-6 text-emerald-600 mb-2" />
+        <span className="text-sm font-medium text-gray-600">Pairs</span>
+        <span className="text-xl font-bold text-gray-800">
           {matchedPairs}/{totalPairs}
         </span>
       </div>

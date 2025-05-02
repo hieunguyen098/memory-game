@@ -9,37 +9,41 @@ interface MemoryCardProps {
 
 export const MemoryCard = memo(
   ({ card, onClick, canFlip }: MemoryCardProps) => {
-    const classes = `w-full h-full rounded-lg cursor-pointer transition-all duration-300
-    ${!canFlip ? "pointer-events-none" : ""} 
-    ${card.isMatched ? "card-matched" : ""}
-    ${
-      card.isFlipping
-        ? card.isFlipped
-          ? "card-flip-enter"
-          : "card-flip-exit"
-        : ""
-    }`;
+    const baseClasses =
+      "w-full h-[100px] rounded-xl cursor-pointer transition-all duration-500 transform-gpu";
+    const disabledClasses = !canFlip ? "pointer-events-none" : "";
+    const matchedClasses = card.isMatched ? "opacity-60" : "";
+    const flipClasses = card.isFlipping
+      ? card.isFlipped
+        ? "rotate-y-180"
+        : "rotate-y-0"
+      : "";
 
     return (
-      <div className={classes} onClick={onClick}>
+      <div
+        className={`${baseClasses} ${disabledClasses} ${matchedClasses} ${flipClasses} hover:scale-[1.02]`}
+        onClick={onClick}
+      >
         {card.isFlipped || card.isMatched ? (
-          <div className="card-back h-full flex items-center justify-center p-2 rounded-lg bg-white shadow-md border border-gray-200">
-            <div className="card-content flex justify-center items-center w-full">
-              <p className="content-word text-base font-medium mr-2">
+          <div className="h-full flex items-center justify-center p-4 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col justify-center items-center w-full gap-2">
+              <p className="text-lg font-semibold text-gray-800 text-center">
                 {card.content}
               </p>
-              {/*<span
-                className={`type-label text-xs px-2 py-1 rounded-full whitespace-nowrap ${
-                  card.type === "english" ? "english-label" : "french-label"
+              <span
+                className={`text-xs px-2 py-1 rounded-full ${
+                  card.type === "english"
+                    ? "bg-blue-100 text-blue-700"
+                    : "bg-purple-100 text-purple-700"
                 }`}
               >
                 {card.type}
-              </span>*/}
+              </span>
             </div>
           </div>
         ) : (
-          <div className="card-front h-full flex items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 shadow-md">
-            <span className="question-mark float-animation text-xl font-bold text-white">
+          <div className="h-full flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-lg hover:shadow-xl transition-all duration-300">
+            <span className="text-3xl font-bold text-white animate-float">
               ?
             </span>
           </div>
