@@ -11,6 +11,10 @@ A language learning memory matching game built with React and Next.js. Match Eng
 - Responsive design that works on desktop and mobile
 - GRADE button to check your progress
 
+## Live Demo
+
+Check out the live demo: [Word Memory Game](https://memory-game-five-orpin.vercel.app/)
+
 ## Getting Started
 
 ### Prerequisites
@@ -23,7 +27,7 @@ A language learning memory matching game built with React and Next.js. Match Eng
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/memory.git
+git clone https://github.com/hieunguyen098/memory-game.git
 cd memory
 ```
 
@@ -56,35 +60,6 @@ yarn dev
 7. Click "GO!" to reset and continue playing
 8. Your final score will also be shown when you complete the game
 
-## Project Structure
-
-```
-src/
-  ├── components/
-  │   ├── WordMemoryGame/
-  │   │   ├── components/
-  │   │   │   ├── Confetti.tsx
-  │   │   │   ├── Icons.tsx
-  │   │   │   ├── MemoryCard.tsx
-  │   │   │   ├── ScoreBoard.tsx
-  │   │   │   ├── StatsDisplay.tsx
-  │   │   │   └── index.ts
-  │   │   ├── data/
-  │   │   │   └── wordPairs.ts
-  │   │   ├── hooks/
-  │   │   │   ├── useGameLogic.ts
-  │   │   │   └── index.ts
-  │   │   ├── types/
-  │   │   │   └── index.ts
-  │   │   ├── utils/
-  │   │   │   └── formatTime.ts
-  │   │   └── index.tsx
-  │   └── index.ts
-  ├── app/
-      ├── page.tsx
-      └── globals.css
-```
-
 ## Technologies Used
 
 - [Next.js](https://nextjs.org/)
@@ -93,10 +68,6 @@ src/
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/) for animations
 - [React Toastify](https://fkhadra.github.io/react-toastify/) for notifications
-
-## License
-
-This project is licensed under the MIT License.
 
 ```
 
